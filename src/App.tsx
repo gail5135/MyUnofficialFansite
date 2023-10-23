@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
-import Profile from "./components/Profile/profile";
+import Profile from "./components/Profile/Profile";
 import Discography from "./components/Discography/discography";
 
 function App() {
