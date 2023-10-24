@@ -27,8 +27,16 @@
     width: 50%;
     height: 100%;
 
-    .profile-introduction__ul {
+    .profile-introduction-title {
+      font-size: 12px;
+      margin-top: 12px;
+      margin-bottom: 4px;
+    }
 
+    .profile-introduction-value {
+      text-align: left;
+      font-size: 14px;
+      margin-left: 8px;
     }
   }
 }
