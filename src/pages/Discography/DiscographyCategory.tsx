@@ -1,4 +1,4 @@
-import { AlbumArts } from "../../constants/albumArts";
+import { AlbumCodes } from "../../constants/albumCodes";
 import AlbumArt from "../../components/AlbumArt/AlbumArt";
 
 interface DiscographyCategoryPropsType {
@@ -13,8 +13,8 @@ function DiscographyCategory(props: DiscographyCategoryPropsType) {
 		<div className={`discography-category ${albumType}`}>
 			<img className="discography-category-tag" src={tagImgSrc} alt={albumType} />
 			<div className="discography-category-album_arts">
-				{AlbumArts[albumType].map((albumArt) => {
-					return <AlbumArt imgSrc={albumArt} key={albumArt} />;
+				{AlbumCodes[albumType].map((AlbumCode) => {
+					return <AlbumArt imgSrc={AlbumCode} albumType={albumType} key={AlbumCode} />;
 				})}
 			</div>
 			<div className="discography-album_arts">

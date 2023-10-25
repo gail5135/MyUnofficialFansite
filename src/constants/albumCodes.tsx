@@ -6,9 +6,9 @@ import gzca_5284 from "../assets/images/albumArts/album/gzca-5284.jpg";
 import gzca_5285 from "../assets/images/albumArts/album/gzca-5285.jpg";
 import gzca_5286 from "../assets/images/albumArts/album/gzca-5286.jpg";
 import gzca_5287 from "../assets/images/albumArts/album/gzca-5287.jpg";
-import gzca_5297s from "../assets/images/albumArts/album/gzca-5297s.jpg";
-import gzca_5298_ from "../assets/images/albumArts/album/gzca-5298.jpg";
-import gzca_5314s from "../assets/images/albumArts/album/gzca-5314s.png";
+import gzca_5297 from "../assets/images/albumArts/album/gzca-5297.jpg";
+import gzca_5298 from "../assets/images/albumArts/album/gzca-5298.jpg";
+import gzca_5314 from "../assets/images/albumArts/album/gzca-5314.png";
 import gzca_5315 from "../assets/images/albumArts/album/gzca-5315.jpg";
 import gzca_5317_5318 from "../assets/images/albumArts/album/gzca-5317_5318.jpg";
 import gzca_5319_5320 from "../assets/images/albumArts/album/gzca-5319_5320.jpg";
@@ -43,20 +43,20 @@ import haishin04 from "../assets/images/albumArts/single/haishin04.jpg";
 import haishin03 from "../assets/images/albumArts/single/haishin03.jpg";
 import tcr_067_069 from "../assets/images/albumArts/single/tcr-067-069.png";
 
-interface AlbumArtsType {
+interface AlbumCodesType {
 	[index: string]: string[];
 	album: string[];
 	single: string[];
 }
 
-export const AlbumArts: AlbumArtsType = {
+export const AlbumCodes: AlbumCodesType = {
 	album: [
 		gzca_5319_5320,
 		gzca_5317_5318,
 		gzca_5315,
-		gzca_5314s,
-		gzca_5298_,
-		gzca_5297s,
+		gzca_5314,
+		gzca_5298,
+		gzca_5297,
 		gzca_5287,
 		gzca_5286,
 		gzca_5285,
@@ -98,3 +98,9 @@ export const AlbumArts: AlbumArtsType = {
 		tcr_067_069,
 	],
 };
+
+export function getImgSrcByAlbumCode(albumType: string, albumCode: string) {
+	return AlbumCodes[albumType].filter((imgSrc: string) => {
+        return imgSrc.includes(String(albumCode));
+    })[0];
+}

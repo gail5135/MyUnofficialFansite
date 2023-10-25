@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 
 interface AlbumArtProps {
 	imgSrc: string;
+	albumType: string;
 }
 
 function AlbumArt(props: AlbumArtProps) {
-	const { imgSrc } = props;
+	const { imgSrc, albumType } = props;
 
 	const tempName: string | undefined = imgSrc.split("/").pop()?.split(".")[0];
 	const albumName: string = typeof tempName === "string" ? tempName : "";
@@ -15,7 +16,7 @@ function AlbumArt(props: AlbumArtProps) {
 	// const dispatch = useDispatch();
 
 	return (
-		<Link className="album-art" to={albumName}>
+		<Link className="album-art" to={`detail/${albumType}/${albumName}`}>
 			<img src={imgSrc} alt={albumName} />
 		</Link>
 	);

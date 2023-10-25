@@ -1,0 +1,15 @@
+.album-detail {
+    display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 20px;
+	width: 100%; 
+    margin-top: 30px;
+
+    .album-detail-left {
+    }
+
+    .album-detail-right {
+        text-align: left;
+    }
+}

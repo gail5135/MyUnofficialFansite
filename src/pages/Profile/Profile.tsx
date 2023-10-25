@@ -12,8 +12,8 @@ function Profile() {
 			<section className="profile-introductions">
 				<ProfileInformationItem type={ProfileInfoItemType.TITLE} value={ProfileInformationTitle.NAME} />
 				<ProfileInformationItem type={ProfileInfoItemType.VALUE} value={ProfileInformationData.NAME.HANJA} />
-				<ProfileInformationItem type={ProfileInfoItemType.VALUE} value={ProfileInformationData.NAME.KOREAN} />
 				<ProfileInformationItem type={ProfileInfoItemType.VALUE} value={ProfileInformationData.NAME.HIRAGANA} />
+				<ProfileInformationItem type={ProfileInfoItemType.VALUE} value={ProfileInformationData.NAME.KOREAN} />
 				<ProfileInformationItem type={ProfileInfoItemType.VALUE} value={ProfileInformationData.NAME.ENGLISH} />
 				<ProfileInformationItem type={ProfileInfoItemType.TITLE} value={ProfileInformationTitle.BIRTH} />
 				<ProfileInformationItem type={ProfileInfoItemType.VALUE} value={ProfileInformationData.BIRTH} />
