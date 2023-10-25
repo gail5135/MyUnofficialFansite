@@ -1,0 +1,27 @@
+.discography {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	.discography-category {
+		text-align: left;
+		margin-bottom: 20px;
+		width: inherit;
+
+		.discography-category-tag {
+			margin-bottom: 10px;
+
+			:hover {
+				cursor: pointer;
+			}
+		}
+
+		.discography-category-album_arts {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 12px;
+		}
+	}
+}

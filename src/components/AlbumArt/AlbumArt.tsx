@@ -1,15 +1,22 @@
+import "./album-art.scss";
 import { Link } from "react-router-dom";
 
 interface AlbumArtProps {
 	imgSrc: string;
-	albumName: string;
 }
 
 function AlbumArt(props: AlbumArtProps) {
-	const { imgSrc, albumName } = props;
+	const { imgSrc } = props;
+
+	const tempName: string | undefined = imgSrc.split("/").pop()?.split(".")[0];
+	const albumName: string = typeof tempName === "string" ? tempName : "";
+
+	// const select = useSelector((state: object) => state.selectedAlbum.name);
+	// const dispatch = useDispatch();
+
 	return (
 		<Link className="album-art" to={albumName}>
-			<img src={imgSrc} />
+			<img src={imgSrc} alt={albumName} />
 		</Link>
 	);
 }

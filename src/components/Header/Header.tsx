@@ -3,19 +3,13 @@ import mainHeaderImg from "../../assets/images/main-header.jpg";
 import "./header.scss";
 
 function Header() {
-  return (
-    <Link className="main-nav-item" to={"/"}>;
-      <header className="main-header">
-        <a href="/">
-          <img
-            src={mainHeaderImg}
-            alt="main-header-img"
-            className="main-header-img"
-          />
-        </a>
-      </header>
-    </Link>
-  );
+	return (
+		<Link className="main-nav-item" to={"/"}>
+			<header className="main-header">
+				<img src={mainHeaderImg} alt="main-header-img" className="main-header-img" />
+			</header>
+		</Link>
+	);
 }
 
 export default Header;
