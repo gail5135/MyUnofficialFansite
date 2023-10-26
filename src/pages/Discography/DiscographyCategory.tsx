@@ -17,9 +17,6 @@ function DiscographyCategory(props: DiscographyCategoryPropsType) {
 					return <AlbumArt imgSrc={AlbumCode} albumType={albumType} key={AlbumCode} />;
 				})}
 			</div>
-			<div className="discography-album_arts">
-				{/* <AlbumArt imgSrc="../../assets/images/albumArts/gzca-4140.jpg" albumName="temp" /> */}
-			</div>
 		</div>
 	);
 }
