@@ -86,7 +86,7 @@ export const AlbumInfos: Array<AlbumInfoType> = [
 		discTitle: undefined,
 		trackList: [
 			"heartbreaker",
-			"WHAT’ｓ",
+			"WHAT’s",
 			"まぜるなきけん",
 			"Black Cherry In The Dirty Forest",
 			"Stranger",
@@ -175,7 +175,6 @@ export function getAlbumInfo(albumCode: string): AlbumInfoType | null {
 		const element: AlbumInfoType = AlbumInfos[idx];
 
 		if (element.code.includes(albumCode)) {
-			console.log(element);
 			return element;
 		}
 	}
